@@ -162,12 +162,13 @@
 					data : {"text" : text}
 				}).done( function( data ){
 					var response = jQuery.parseJSON( data );
+					alert( data );
 					
 					var id = response.id;
 					var title = "odgovarajuci title";
 					//alert(id);
 					if(response.error == false){
-						alert(id);
+						//alert(id);
 						var newToDo = new toDo(id, text, title);
 						toDoArr.push( newToDo );
 						$(".popup_add_new").css({
