@@ -1,6 +1,14 @@
 <?php
 
+include("mysqli_konekcija.php");
+
 $id = $_GET['id'];
+
+$sql = "DELETE FROM todos WHERE id = '$id'";
+
+$dbc->query($sql);
+
+$dbc->close();
 
 $response['error'] = false;
 $response['message'] = 'OK';

@@ -93,7 +93,8 @@
 					var id = $(this).data("id");
 					$.ajax({
 						url: "delete.php",
-						method : "get"
+						method : "get",
+						data : {"id" : id}
 					}).done( function( data ){
 						var response = jQuery.parseJSON( data );
 						
