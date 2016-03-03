@@ -167,6 +167,7 @@
 					var title = "odgovarajuci title";
 					//alert(id);
 					if(response.error == false){
+						alert(id);
 						var newToDo = new toDo(id, text, title);
 						toDoArr.push( newToDo );
 						$(".popup_add_new").css({
